@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/membership.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Join Us | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: '', authenticated: authenticated }) %>
+
+    <!-- CONTACT PAGE FIRST SECTION START -->
+    <section class="contactcontainer" id="add-margin">
+        <div class="contact-page-header">
+            <h3>Purchase Membership</h3>
+            <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+        </div>
+        <div class="content">
+            <div class="left-side" data-aos="fade-right">
+                <% if (membershipType === 'basic') { %>
+                <div class="contactimage">
+                    <img src="../img/basic.jpg" alt="">
+                </div>
+                <div class="contactinfo">
+                    <h2>Basic Membership</h2>
+                    <p>Access our well-equipped gym and kickstart your fitness journey with the Basic Membership. (Rs. 3000/month only)</p>
+                    <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                    <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> Budget-friendly option</p>
+                </div>
+                <% } else if (membershipType === 'zumbastic') { %>
+                    <div class="contactimage">
+                        <img src="../img/zumbastic.jpg" alt="">
+                    </div>
+                    <div class="contactinfo">
+                        <h2>Zumbastic Membership</h2>
+                        <p>Dive into fitness with Basic Gym access plus four weekly Zumba classes in the lively atmosphere of our spacious hall. (Rs. 5000/month only)</p>
+                        <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Basic gym access</p>
+                        <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> 4 weekly Zumba classes</p>
+                    </div>
+                    <% } else if (membershipType === 'yogastic') { %>
+                        <div class="contactimage">
+                            <img src="../img/yogastic.jpg" alt="">
+                        </div>
+                        <div class="contactinfo">
+                            <h2>Yogastic Membership</h2>
+                            <p>Embrace tranquility with Basic Gym access and four weekly Yoga classes, finding peace in our dedicated yoga space. (Rs. 5000/month only)</p>
+                            <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> 4 weekly Zumba classes</p>
+                            <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> Basic gym access</p>
+                        </div>
+                    <% } else if (membershipType === 'elite') { %>
+                        <div class="contactimage">
+                            <img src="../img/elite.jpg" alt="">
+                        </div>
+                        <div class="contactinfo">
+                            <h2>Elite Membership</h2>
+                            <p>Unlimited access to all facilities, including gym, Zumba, and Yoga classes, for a comprehensive and energizing fitness experience. (Rs. 8000/month only)</p>
+                            <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                            <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> Unlimited classes</p>
+                        </div>
+                    <% } else if (membershipType === 'platinum') { %>
+                        <div class="contactimage">
+                            <img src="../img/platinum.jpg" alt="">
+                        </div>
+                        <div class="contactinfo">
+                            <h2>Platinum Membership</h2>
+                            <p>Experience the ultimate fitness package with unlimited access to all facilities, creating a personalized and comprehensive wellness routine. (Rs. 12000/month only)</p>
+                            <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Unlimited access to all facilities</p>
+                            <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> Serenity with unlimited sauna and steam use</p>
+                        </div>
+                    <% } else if (membershipType === 'private-trainer') { %>
+                        <div class="contactimage">
+                            <img src="../img/personal_trainer.jpg" alt="">
+                        </div>
+                        <div class="contactinfo">
+                            <h2>Private Trainer</h2>
+                            <p>Elevate your fitness journey with personalized training from a private trainer, focusing on your unique goals. (Rs. 10000/month only)</p>
+                            <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                            <p style="font-size: 18px;"><i class="fa-solid fa-dumbbell"></i> One-on-one private training</p>
+                        </div>
+                    <% } else { %>
+                        <p>Please choose a valid membership option</p>
+                    <% } %>                    
+            </div>
+            <div class="right-side" data-aos="fade-left">
+                <div class="right-side-container">
+                    <div class="topic-text" style="font-size: 28px;">Please fill this form.</div>
+                    <form action="/membershipform" method="POST">
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your name" name='name' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="email" placeholder="Your email" name='email' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your phone" pattern="[0-9]{10}" name='phone' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your Address" name='address' required>
+                        </div>
+                        <div class="input-box">
+                            <label>
+                                <p style="font-size: 17px;">Start Date: </p>
+                                <input type="date" name="startDate" id="startDate" required>
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <p style="font-size: 17px;">Preffered method of communication</p>
+                            <span style="padding-left: 20px;">Phone: </span><input type="radio" name="preferredCommunication" id="phone" value="phone" checked>
+                            <span>Email: </span><input type="radio" name="preferredCommunication" value="email" id="email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea name="additionalComments" id="message" placeholder="Additional Information (Optional)"></textarea>
+                        </div>
+                        <div class="check-box">
+                            <label>
+                                <input type="checkbox" name="remember" style="margin-bottom: 15px"/>
+                                Agree to Fitness Club's terms and policies.
+                            </label>
+                        </div>
+                        <input type="hidden" name="membershipType" value="<%= membershipType %>">
+                        <div class="button">
+                            <input type="submit" value="Join Now" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT PAGE FIRST SECTION END -->
+    <div class="" style="height: 6rem;"></div>
+
+    <%- include('partials/footer', { activePage: '' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

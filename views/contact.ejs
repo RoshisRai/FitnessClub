@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <title>Contact Us | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'contact' }) %>
+
+    <!-- PAGE MAIN IMAGE START  -->
+    <section class="page-image" id="add-margin">
+        <div class="page-image-container">
+            <h1>CONTACT US</h1>
+            <div class="page-location">
+                <a href="/"><i class="fa-solid fa-house"></i></a>&nbsp; // CONTACT US
+            </div>
+        </div>
+    </section>
+    <!-- PAGE MAIN IMAGE END  -->
+
+    <!-- CONTACT PAGE FIRST SECTION START -->
+    <section class="contactcontainer">
+        <div class="contact-page-header">
+            <h3>Contact Us</h3>
+            <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+        </div>
+        <div class="content">
+            <div class="left-side" data-aos="fade-right">
+                <div class="contactimage">
+                    <img src="img/counter-background.jpg" alt="">
+                </div>
+                <div class="contactinfo">
+                <h2>Contact Information</h2>
+                <p>Fill up the form for any queries or for the support you need from our team.</p>
+                <p style="line-height: 2;font-size: 18px;"><i class="fas fa-phone-alt"></i></i> &nbsp; +977 9800330022</p>
+                <p style="font-size: 18px;"><i class="far fa-envelope-open"></i> &nbsp; fitnessclubnepal@gmail.com</p>
+                <p style="font-size: 20px;">
+                    <a rel="nofollow" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a> &nbsp;
+                    <a rel="nofollow" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> &nbsp;
+                    <a rel="nofollow" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> &nbsp;
+                    <a rel="nofollow" href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a> &nbsp;
+                    <a rel="nofollow" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a> &nbsp;
+                    <a href="https://www.fitnessclub.com" target="_blank"><i class="fas fa-paperclip"></i></a> &nbsp;
+                </p>
+                </div>
+            </div>
+            <div class="right-side" data-aos="fade-left">
+                <div class="right-side-container">
+                    <div class="topic-text" style="font-size: 28px;">Contact Us</div>
+                    <p style="font-size: 18px;">If you have any queries and suggestions, you can send me message from here.</p>
+                    <form action="/contact" method="POST">
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your name" name='name' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="email" placeholder="Your email" name='email' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your phone" pattern="[0-9]{10}" name='phone' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your Subject" name='subject' required>
+                        </div>
+                        <div class="input-box">
+                            <p style="font-size: 17px;">Preffered method of communication</p>
+                            <span style="padding-left: 20px;">Phone: </span><input type="radio" name="preferredCommunication" id="phone" value="phone" checked>
+                            <span>Email: </span><input type="radio" name="preferredCommunication" value="email" id="email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea name="message" id="message" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Send Now" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT PAGE FIRST SECTION END -->
+
+   <!-- MAP SECTION START  -->
+   <section class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7354.9922347197635!2d85.31262163777762!3d27.728169091170134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191ed757779f%3A0xa3fb7fed922d73e8!2sSamakhusi%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sca!4v1704516339182!5m2!1sen!2sca" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+    </section>
+   <!-- MAP SECTION END  -->
+
+   <%- include('partials/footer', { activePage: 'contact' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

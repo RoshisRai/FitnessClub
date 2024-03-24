@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>About Us | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'about', messages: messages }) %>
+
+    <!-- PAGE MAIN IMAGE START  -->
+    <section class="page-image" id="add-margin">
+        <div class="page-image-container">
+            <h1>ABOUT US</h1>
+            <div class="page-location">
+                <a href="/"><i class="fa-solid fa-house"></i></a>&nbsp; // ABOUT US
+            </div>
+        </div>
+    </section>
+    <!-- PAGE MAIN IMAGE END  -->
+
+    <!-- ABOUT FIRST START -->
+    <section class="about-first">
+        <div class="about-first-container">
+            <div class="about-first-left" data-aos="fade-left">
+                <div class="about-first-img1">
+                    <img src="img/about-story-background.jpg" alt="">
+                </div>
+                <div class="about-first-img2">
+                    <div class="img1">
+                        <img src="img/gallery5.jpg" alt="">
+                    </div>
+                    <div class="img2">
+                        <img src="img/yoga_class.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-first-right" data-aos="fade-right">
+                <div class="about-first-desc">
+                    <h2>Our Commitment to You</h2>
+                <p>At Fitness Club, our commitment is as straightforward as it gets: we're here for you. We're not just another gym; we're your fitness family. Our seasoned trainers are more than just experts; they're your buddies on this health journey. From personalized workouts to top-notch facilities, we're all about making your fitness adventure personal, motivating, and transformative. Join us in a space where health and wellness feel like home, and every step in your fitness adventure is met with cheers, encouragement, and genuine expertise.</p>
+                </div>
+                <div class="buttons">
+                    <a href="/classes">
+                        <button class="btn">View Classes</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT FIRST END -->
+
+    <!-- ABOUT STATS START  -->
+    <section class="about-stats">
+        <div class="about-stats-container">
+            <div class="about-stats-boxes">
+                <div class="box">
+                    <h3><span class="count-digit">5000</span>+</h3>
+                    <h4>HAPPY MEMBERS</h4>
+                </div>
+                <div class="box">
+                    <h3><span class="count-digit">50</span>+</h3>
+                    <h4>FITNESS CLASSES WEEKLY</h4>
+                </div>
+                <div class="box">
+                    <h3><span class="count-digit">10</span>+</h3>
+                    <h4>EXPERT INSTRUCTORS</h4>
+                </div>
+                <div class="box">
+                    <h3><span class="count-digit">2000</span>+</h3>
+                    <h4>FITNESS HOURS MONTHLY</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT STATS END  -->
+
+    <!-- ABOUT SECOND START  -->
+    <section class="about-second">
+        <div class="about-second-container">
+            <div class="about-second-left">
+                <h3><div data-aos="fade-right">Fitness Club's Story</div></h3>
+                <p>Welcome to Fitness Club, where the vibe is all about real people and fitness that feels just right. Our journey started with a simple love for staying healthy and fit, and it's grown into a place where everyone's story matters. Our gym, buzzing Zumba classes, and laid-back yoga sessions are here for you. We're not about fancy words; we're about real workouts that work. From first-timers to fitness buffs, every drop of sweat counts as a win. Join us in keeping it real, fun, and fit together! Because at Fitness Club, it's not just about getting fit; it's about enjoying the journey.
+                </p>
+            </div>
+            <div class="about-second-right">
+                <div class="about-second-img">
+                    <!-- <img src="./img/hero5.png" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT SECOND END  -->
+
+    <!-- ABOUT BRANCHES START  -->
+    <section class="about-branch">
+        <div class="about-branch-container">
+            <div class="about-branch-header">
+                <h3>Why Choose Fitness Club?</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Why pick Fitness Club? Because we're not your typical gym—we're your go-to partner in your wellness journey. Our commitment to diversity shines in our cardio, strength training, Zumba, and yoga classes. It's not just about meeting preferences; it's about celebrating every fitness flavor. With flexible membership plans, our expert instructors go beyond just guiding your workouts; they inspire and make fitness a joy. Beyond the positive vibes lies a community-driven spirit, making Fitness Club not just a gym but a place where achieving, sustaining, and happily celebrating your fitness goals is the real deal. Join us, where fitness feels good and real.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT BRANCHES END  -->
+
+    <%- include('partials/footer', { activePage: 'about' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function(){
+            function visible(partial) {
+            var $t = partial,
+                $w = jQuery(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
+
+        }
+        $(window).scroll(function(){
+
+            if(visible($('.count-digit')))
+              {
+                  if($('.count-digit').hasClass('counter-loaded')) return;
+                  $('.count-digit').addClass('counter-loaded');
+                
+                  $('.count-digit').each(function () {
+                  var $this = $(this);
+                  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                      duration: 2000,
+                      easing: 'swing',
+                      step: function () {
+                      $this.text(Math.ceil(this.Counter));
+                      }
+                  });
+                  });
+              }
+          })
+        })
+    </script>
+</body>
+</html>

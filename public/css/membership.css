@@ -1,0 +1,499 @@
+/* MEMBERSHIP FORM  */
+.contactcontainer {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 6em;
+    padding: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-page-header{
+    text-align: center;
+}
+.contact-page-header h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+}
+.contact-page-header h4{
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    opacity: .6;
+}
+.contact-page-header p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+.contact-page-header p i{
+    font-size: 1.1rem;
+    color: var(--secondary-color-hover);
+}
+.contact-page-header p span{
+    position: relative;
+    margin: 0 2rem;
+    width: 5rem;
+    height: 1rem;
+}
+.contact-page-header p span:first-child::before,
+.contact-page-header p span:last-child::before{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+.contact-page-header p span:first-child::after,
+.contact-page-header p span:last-child::after{
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+  .contactcontainer .content {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+    /* background: #fcfcfc; */
+    border-radius: .3rem;
+  
+  }
+  .contactcontainer .content .left-side {
+    /* height: 100%; */
+    width: 50%;
+    /* background: url("../img/cat4.jpg") 0 / cover no-repeat; */
+    position: relative;
+    /* background: red; */
+    min-height: 540px;
+  }
+  .contactcontainer .content .left-side .contactimage{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+  }
+  .contactcontainer .content .left-side .contactimage img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: relative;
+  }
+  /* .contactcontainer .content .left-side::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../img/cat4.jpg') 0/cover no-repeat;
+    object-fit: cover;
+  } */
+  .contactcontainer .content .left-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.46);
+    z-index: 9;
+  }
+  .contactcontainer .content .left-side .contactinfo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 90%;
+    color: #ffffff;
+    /* color: #000; */
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+  }
+  .contactinfo h2{
+    border-bottom: .2rem solid var(--secondary-color);
+    font-size: 1.5rem;
+  }
+  .contactinfo p {
+    margin: 10px 0 0 0;
+  }
+  .contactinfo p a {
+    color: #fff;
+  }
+  .contactcontainer .content .right-side {
+    width: 50%;
+    /* margin-left: 75px; */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .contactcontainer .content .right-side-container{
+      margin: 0 20px;
+  }
+  .contactcontainer .right-side .topic-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-color-hover);
+    margin-bottom: 1rem;
+  }
+  .right-side-container form{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .contactcontainer .content .right-side .input-box {
+    min-height: 50px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .contactcontainer .content .right-side .input-box:not(:nth-child(5)){
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  .contactcontainer .content .right-side .sinput-box{
+    width: 48%;
+  }
+  .contactcontainer .right-side .input-box input,
+  .contactcontainer .right-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* border-left: 6px solid #ce4f3e;
+    border-bottom: 3px solid #ce4f3e; */
+    background: #fff;
+    padding: 0 10px;
+    resize: none;
+  }
+  .contactcontainer .right-side .input-box input[type="radio"] {
+    width: 3%;
+    min-width: 15px;
+    height: 50%;
+  }
+  .contactcontainer .right-side .input-box span {
+    position: inherit;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .contactcontainer .right-side .check-box {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  #membershipPlan{
+    transform: scale(1.2);
+    margin-left: 2rem;
+  }
+  .contactcontainer .right-side .check-box input[type="checkbox"]{
+    transform: scale(1.5);
+    margin-right: .5rem;
+  }
+  .contactcontainer .right-side .message-box {
+    min-height: 110px;
+  }
+  .contactcontainer .right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .no-membership button,
+  .contactcontainer .right-side .button input[type="submit"] {
+    color: var(--light);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    background: var(--secondary-color-hover);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 5rem;
+  }
+  .no-membership button:hover,
+  .contactcontainer .right-side .button input[type="submit"]:hover {
+    background: var(--primary-color);
+  }
+  .contactcontainer .right-side .message-box textarea {
+    padding-top: 6px;
+    resize: vertical;
+    height: 100px;
+  }
+  @media screen and (max-width: 1200px){
+    .contactcontainer .content .left-side .contactinfo {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      color: #ffffff;
+      /* color: #000; */
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 100;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .contactcontainer .content .right-side {
+      margin-left: 25px;
+    }
+  }
+  @media screen and (max-width: 876px) {
+    .contactcontainer .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      /* height: 1150px; */
+      overflow: visible;
+    }
+    .contactcontainer .content .left-side {
+      width: 100%;
+      height: 30%;
+      min-height: 350px;
+    }
+    .contactcontainer .content .left-side .contactinfo {
+      top: 10px;
+      left: 0;
+      width: 100%;
+    }
+    .contactinfo h2 {
+      margin-bottom: 1rem;
+    }
+    .contactinfo p {
+      margin: 0;
+    }
+    .contactinfo p:last-child {
+      margin: 10px 0 0 0;
+    }
+    .contactcontainer .content .right-side {
+      width: 100%;
+      height: 70%;
+      margin-left: 0px;
+      padding: 10px;
+    }
+    .contactcontainer .content .right-side .right-side-container{
+      margin: 0 0;
+    }
+    .contactcontainer .content .right-side .sinput-box{
+      width: 100%;
+    }
+  }  
+  @media screen and (max-width: 768px){
+    .contactcontainer .content{
+      width: 95%;
+    }
+  }
+/* MEMBERSHIP FORM  */
+
+/* VIEW MEMBERSHIP FIRST START */
+.membershipcontainer {
+    width: 80%;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    padding: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+  }
+  .membership-page-header{
+    text-align: left;
+    width: 100%;
+}
+.membership-page-header h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+}
+.membership-page-header h4{
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: .2rem;
+}
+.membership-page-header p{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 1.8rem;
+}
+.membership-page-header p i{
+    font-size: 1.1rem;
+    color: var(--secondary-color-hover);
+}
+.membership-page-header p span{
+    position: relative;
+    margin: 0 2rem;
+    width: 5rem;
+    height: 1rem;
+}
+.membership-page-header p span:first-child::before,
+.membership-page-header p span:last-child::before{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+.membership-page-header p span:first-child::after,
+.membership-page-header p span:last-child::after{
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+.membershipcontainer .sauna-content,
+.membershipcontainer .content {
+  width: 100%;
+  min-height: 50px;
+}
+
+  .membershipcontainer .content .content-main,
+  .membershipcontainer .sauna-content .sauna-main {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    border-radius: .3rem;
+  
+  }
+
+  .membershipcontainer .sauna-content h4 {
+    padding-top: 20px;
+    margin-top: 20px; 
+    padding-bottom: 20px;
+    border-top: 1px solid #aaa; 
+    width: 100%;
+  }
+  .membershipcontainer .left-side {
+    width: 40%;
+    position: relative;
+    min-height: 280px;
+  }
+  .membershipcontainer .left-side .membershipimage{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      border-radius: .5rem;
+  }
+  .membershipcontainer .left-side .membershipimage img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+  .membershipcontainer .right-side {
+    width: 60%;
+    /* margin-left: 75px; */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .membershipcontainer .right-side-container{
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      min-height: 280px;
+      padding: .5rem 0;
+  }
+  .right-side-container .texts h2{
+    color: var(--secondary-color-hover);
+  }
+  .right-side-container .texts p{
+    margin-bottom: .5rem;
+  }
+  .right-side-container .texts .key-features h4{
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .right-side-container .texts .key-features p{
+    font-size: .9rem;
+    margin: .3rem 0 0 0;
+  }
+  .membershipcontainer .sauna-content .button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .membershipcontainer .button input[type="button"] {
+    color: var(--light);
+    font-size: .8rem;
+    outline: none;
+    border: .2rem solid transparent;
+    padding: 8px 20px;
+    background: var(--secondary-color-hover);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 5rem;
+    margin-top: 1.5rem;
+  }
+  .membershipcontainer .button input[type="button"]:hover {
+    border: .2rem solid var(--secondary-color-hover);
+    background-color: var(--secondary-color);
+  }
+  .membershipcontainer .right-side .button a:nth-child(2) input {
+    border: .2rem solid var(--secondary-color-hover);
+    background-color: transparent;
+    margin-top: .5rem;
+    color: var(--dark);
+  }
+  .membershipcontainer .right-side .button a:nth-child(2) input:hover {
+    background-color: var(--secondary-color);
+    color: var(--light);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .membershipcontainer .right-side {
+      margin-left: 25px;
+    }
+  }
+  @media screen and (max-width: 876px) {
+    .membershipcontainer .sauna-content .sauna-main,
+    .membershipcontainer .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      overflow: visible;
+    }
+    .membershipcontainer .left-side {
+      width: 100%;
+      height: 30%;
+      min-height: 350px;
+    }
+    .membershipcontainer .right-side {
+      width: 100%;
+      height: 70%;
+      margin-left: 0px;
+      padding: 10px;
+    }
+    .membershipcontainer .right-side .right-side-container{
+      margin: 0 0;
+      min-height: 250px;
+    }
+  }  
+  @media screen and (max-width: 768px){
+    .membershipcontainer .sauna-content .sauna-main,
+    .membershipcontainer .content .content-main{
+      width: 95%;
+    }
+  }
+/* VIEW MEMBERSHIP FIRST END */

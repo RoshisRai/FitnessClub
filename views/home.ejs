@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Elevate your fitness journey at Fitness Club. Discover state-of-the-art facilities, expert trainers, and a commitment to your well-being. Join us for a transformative fitness experience.">
+    <meta name="keywords" content="fitness club, gym, health, wellness, workouts, personal training">
+    <meta name="author" content="Fitness Club">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta property="og:title" content="Fitness Club - Elevate Your Fitness Experience">
+    <meta property="og:description" content="Discover state-of-the-art facilities, expert trainers, and a commitment to your well-being. Join us for a transformative fitness experience.">
+    <meta property="og:image" content="https://fitnessclub.com/img/logo.png">
+    <meta property="og:url" content="https://fitnessclub.com">
+
+    <link rel="canonical" href="https://fitnessclub.com">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Fitness Club: Elevate Your Fitness, Ignite Your Potential.</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+    
+    <%- include('partials/header', { activePage: 'home', messages: messages }) %>
+    <!-- HERO START -->
+    <section class="banner-section" id="add-margin">
+        <div class="slider">
+            <div class="myslide fade">
+                <div class="txt texts">
+                    <h3 class="sth3">IGNITE ENERGY</h3>
+                    <h2 class="sth2">Cardio <span>Workouts</span></h2>
+                    <p class="stp">Heart-pumping sessions to boost endurance, burn calories, and unleash vitality.</p>
+                    <div class="stbtns buttons">
+                        <a href="/pricing"><button>Join Today &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                        <a href="/about"><button>About Us &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                    </div>
+                </div>
+                <img src="img/cardio.jpg" style="width: 100%;">
+            </div>
+            
+            <div class="myslide fade">
+                <div class="txt texts">
+                    <h3 class="sth3">FORGE POWER</h3>
+                    <h2 class="sth2"><span>Strength</span> Traning</h2>
+                    <p class="stp">Sculpt and strengthen with expertly crafted routines for enduring vitality.</p>
+                    <div class="stbtns buttons">
+                        <a href="/classes"><button>View Classes &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                        <a href="/trainers"><button>Our Trainers &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                    </div>
+                </div>
+                <img src="img/strength.jpg" style="width: 100%;">
+            </div>
+            
+            <div class="myslide fade">
+                <div class="txt texts">
+                    <h3 class="sth3">DANCE INTO JOY</h3>
+                    <h2 class="sth2"><span>Zumba</span> Classes</h2>
+                    <p class="stp">Unleash joy and sculpt your body with infectious beats in Zumba.</p>
+                    <div class="stbtns buttons">
+                        <a href="/pricing"><button>Our Pricing &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                        <a href="/about"><button>About Us &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                    </div>
+                </div>
+                <img src="img/zumba.jpg" style="width: 100%;">
+            </div>
+            
+            <div class="myslide fade">
+                <div class="txt texts">
+                    <h3 class="sth3">FIND INNER PEACE</h3>
+                    <h2 class="sth2">Yoga <span>Classes</span></h2>
+                    <p class="stp">Cultivate tranquility, flexibility, and strength in our yoga sanctuary.</p>
+                    <div class="stbtns buttons">
+                        <a href="/classes"><button>View Classes &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                        <a href="/contact"><button>Contact Us &nbsp;&nbsp;<i class="fa-sharp fa-solid fa-circle-arrow-right"></i></button></a>
+                    </div>
+                </div>
+                <img src="img/yoga.jpg" style="width: 100%;">
+            </div>
+            <!-- /fade css
+            
+            <!-- onclick js -->
+            <a class="slide-prev" onclick="plusSlides(-1)"><i class="fa-solid fa-circle-chevron-left"></i></a>
+            <a class="slide-next" onclick="plusSlides(1)"><i class="fa-solid fa-circle-chevron-right"></i></a>
+            
+            <div class="dotsbox" style="text-align:center">
+                <span class="fa-solid fa-dumbbell dot" aria-hidden="true" onclick="currentSlide(1)"></span>
+                <span class="fa-solid fa-dumbbell dot" aria-hidden="true" onclick="currentSlide(2)"></span>
+                <span class="fa-solid fa-dumbbell dot" aria-hidden="true" onclick="currentSlide(3)"></span>
+                <span class="fa-solid fa-dumbbell dot" aria-hidden="true" onclick="currentSlide(4)"></span>
+            </div>
+            <!-- /onclick js -->
+        </div>
+    </section>
+    <!-- HERO END -->
+
+    <!-- HIGHLIGHTED classes START -->
+    <section class="highlighted-classes">
+        <div class="highlighted-container">
+            <div class="box">
+                <div data-aos="fade-up" data-aos-offset="10">
+                    <h3><span><i class="ri-open-arm-line"></i></span></h3>
+                    <h4>Open Door Policy</h4>
+                    <p>We believe in providing unrestricted access to all individuals, regardless of their fitness level, age, or background.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div data-aos="fade-up" data-aos-offset="70">
+                    <h3><span><i class="fa-solid fa-spa"></i></span></h3>
+                    <h4>Sauna Availability</h4>
+                    <p>Enjoy exclusive access to our sauna, steam room, and convenient facilities for an enhanced experience. Your safety and peace of mind remain our top priority.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div data-aos="fade-up" data-aos-offset="130">
+                    <h3><span><i class="ri-p2p-line"></i></span></h3>
+                    <h4>Personal Trainer</h4>
+                    <p>With personalized workout plans tailored to your needs, we will ensure that you get the most out of your gym experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HIGHLIGHTED classes END -->
+
+    <!-- ABOUT START  -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-left"><h3><div data-aos="fade-right">Fitness Club's Story</div></h3></div>
+            <div class="about-right">
+                <div class="about-img">
+                    <img src="./img/about.jpg" alt="">
+                </div>
+                <div class="about-desc">
+                    <div data-aos="fade-left">
+                    <p>Welcome to Fitness Club, where the vibe is all about real people and fitness that feels just right. Our journey started with a simple love for staying healthy and fit, and it's grown into a place where everyone's story matters. Our gym, buzzing Zumba classes, and laid-back yoga sessions are here for you. We're not about fancy words; we're about real workouts that work. From first-timers to fitness buffs, every drop of sweat counts as a win. Join us in keeping it real, fun, and fit together! Because at Fitness Club, it's not just about getting fit; it's about enjoying the journey.</p>
+                    <a href="/about"><button>Read more</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT END  -->
+
+    <!-- CLASSES START  -->
+    <section class="classes">
+        <div class="classes-container">
+            <div class="class-header">
+                <h3>Our Classes</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Explore Fitness Club's diverse classes, from cutting-edge cardio and strength training to lively Zumba and yoga sessions. Our fully equipped gym and convenient facilities ensure an enjoyable fitness journey. Join us in crafting a vibrant, healthy lifestyle tailored to your preferences.</p>
+            </div>
+            <div class="class-boxes">
+                <div class="box" data-aos="fade-up">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/cardio_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Cardio Workouts</h3>
+                        <p>Recharge with cardio in our top-notch gym. Shed calories, boost stamina, and leave feeling revitalized. Join us for an invigorating fitness experience.</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-offset="200">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/strength_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Strength Training</h3>
+                        <p>Define your strength with personalized training. Our trainers guide you to build power and resilience. Elevate your fitness journey with tailored workouts.</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/zumba_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Zumba Classes</h3>
+                        <p>Dance into joy in our spacious hall. Zumba sessions blend fitness and fun, creating a lively atmosphere. Join the celebration—it's a fitness party!</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-offset="200">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/yoga_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Yoga Classes</h3>
+                        <p>Unwind with yoga, offered mornings and evenings. Discover serenity in our dedicated space, a haven for peaceful moments. Embrace the calm within.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CLASSES END  -->
+
+    <!-- TRAINER START  -->
+    <section class="trainers">
+        <div class="trainers-container">
+            <div class="trainer-header">
+                <h3>Our Trainers</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Our trainers are more than just experts in exercise; they are passionate about helping you achieve your health and fitness goals. Our trainers are equipped to tailor workout programs to meet your unique needs.</p>
+            </div>
+            <div class="trainer__grid" data-aos="zoom-out" data-aos-offset="50">
+                <div class="trainer__card">
+                  <img src="img/trainer-1.jpg" alt="trainer" />
+                </div>
+                <div class="trainer__card">
+                  <div class="trainer__content">
+                    <h4>James Rodriguez</h4>
+                    <h5>Strength and Conditioning</h5>
+                    <hr />
+                    <p>
+                      With a background in competitive sports, he's dedicated to helping
+                      you reach your peak physical performance.
+                    </p>
+                    <div class="trainer__socials">
+                      <a href="#"><i class="ri-facebook-fill"></i></a>
+                      <a href="#"><i class="ri-google-fill"></i></a>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                      <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="trainer__card">
+                  <img src="img/trainer-2.jpg" alt="trainer" />
+                </div>
+                <div class="trainer__card">
+                  <div class="trainer__content">
+                    <h4>Mark Harris</h4>
+                    <h5>HIIT and Functional</h5>
+                    <hr />
+                    <p>
+                      His energetic and dynamic workouts are designed to push your
+                      limits, boost metabolism, and torch calories.
+                    </p>
+                    <div class="trainer__socials">
+                      <a href="#"><i class="ri-facebook-fill"></i></a>
+                      <a href="#"><i class="ri-google-fill"></i></a>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                      <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="trainer__card">
+                  <img src="img/trainer-3.jpg" alt="trainer" />
+                </div>
+                <div class="trainer__card">
+                  <div class="trainer__content">
+                    <h4>Emily Davis</h4>
+                    <h5>Yoga and Mindfulness</h5>
+                    <hr />
+                    <p>
+                      Emily's sessions are about physical postures and also about
+                      cultivating inner peace and mindfulness.
+                    </p>
+                    <div class="trainer__socials">
+                      <a href="#"><i class="ri-facebook-fill"></i></a>
+                      <a href="#"><i class="ri-google-fill"></i></a>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                      <a href="#"><i class="ri-twitter-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TRAINER END  -->
+
+    <!-- PRICING START  -->
+    <section class="plans">
+        <div class="plans-container">
+            <div class="plan-header">
+                <h3>Our Pricing</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Explore a variety of memberships tailored for diverse preferences. Whether it's basic, Zumba, yoga, or the all-inclusive platinum package, find the ideal plan for your fitness journey.</p>
+            </div>
+            <div class="plan-boxes">
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 3000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/basic.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/basic">
+                                        <img src="img/basic.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/basic.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Basic Membership</h3>
+                                <p>Access our well-equipped gym and kickstart your fitness journey with the Basic Membership.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Full gym access</li>
+                                    <li>Budget-friendly option</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/basic">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 8000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/elite.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/elite">
+                                        <img src="img/elite.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/elite.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Elite Membership</h3>
+                                <p>Unlimited access to all facilities, including gym, Zumba, and Yoga classes, for a comprehensive and energizing fitness experience.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Full gym access</li>
+                                    <li>Unlimited classes</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/elite">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 12000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/platinum.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/platinum">
+                                        <img src="img/platinum.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/platinum.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Platinum Membership</h3>
+                                <p>Experience the ultimate fitness package with unlimited access to all facilities, creating a personalized and comprehensive wellness routine.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Unlimited access to all facilities</li>
+                                    <li>Serenity with unlimited sauna and steam use</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/platinum">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more-plans">
+                <div class="button">
+                    <a href="/pricing"><button>Explore more plans</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PRICING END  -->
+
+    <!-- GALLERY START  -->
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h3 data-aos="flip-left" data-aos-offset="30">Gallery</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+            </div>
+            <div class="gallery-desc"> 
+                <div class="gallery-index">
+                    <div class="image image1" data-aos="fade-up" data-aos-offset="40">
+                        <img src="img/gallery1.jpg" alt="">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="image image2" data-aos="fade-up" data-aos-offset="60">
+                        <img src="img/gallery2.jpg" alt="">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="image image3" data-aos="fade-up" data-aos-offset="80">
+                        <img src="img/gallery3.jpg" alt="">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="image image4" data-aos="fade-up" data-aos-offset="100">
+                        <img src="img/gallery4.jpg" alt="">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="image image5">
+                        <img src="img/gallery5.jpg" alt="" data-aos="fade-up" data-aos-offset="40">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                    <div class="image image6" data-aos="fade-up" data-aos-offset="60">
+                        <img src="img/gallery6.jpg" alt="">
+                        <div class="img-view-icon">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-box">
+                    <div class="details">
+                        <span class="title">Image <p class="current-img"></p> of <p class="total-img"></p></span>
+                        <span class="icon fa-regular fa-circle-xmark"></span>
+                    </div>
+                    <div class="image-box">
+                        <div class="sli pre"><i class="fa-solid fa-angle-left"></i></div>
+                        <div class="sli nex"><i class="fa-solid fa-angle-right"></i></div>
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </section>
+    <!-- GALLERY END  -->
+    <%- include('partials/contact') %>
+
+    <%- include('partials/footer', { activePage: 'home' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        let getDate = new Date()
+        let dateSpan = document.getElementById('date')
+        dateSpan.innerHTML = getDate.getFullYear()
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

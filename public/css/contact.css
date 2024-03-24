@@ -1,0 +1,357 @@
+/* PAGE MAIN IMAGE START  */
+.page-image{
+    width: 100%;
+    height: 20rem;
+    background: var(--light-hover) url("../img/top-background.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page-image::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.742);
+	z-index: 3;
+}
+.page-image-container{
+    width: 80%;
+    z-index: 4;
+}
+.page-image-container h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+.page-image-container .page-location{
+    color: var(--light-hover);
+}
+.page-image-container .page-location a{
+    color: var(--secondary-color);
+}
+@media screen and (max-width: 1200px){
+  .page-image{
+      height: 16rem;
+  }
+}
+@media screen and (max-width: 992px){
+  .page-image-container{
+      width: 90%;
+  }
+}
+@media screen and (max-width: 768px){
+  .page-image-container{
+      width: 95%;
+  }
+}
+/* PAGE MAIN IMAGE END  */
+
+/* CONTACT FIRST START  */
+.contactcontainer {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    padding: 4rem 0 0 0;
+    /* height: 600px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-page-header{
+    text-align: center;
+}
+.contact-page-header h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: .2rem;
+    text-transform: uppercase;
+}
+.contact-page-header h4{
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    opacity: .6;
+}
+.contact-page-header p{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+.contact-page-header p i{
+    font-size: 1.1rem;
+    color: var(--secondary-color-hover);
+}
+.contact-page-header p span{
+    position: relative;
+    margin: 0 2rem;
+    width: 5rem;
+    height: 1rem;
+}
+.contact-page-header p span:first-child::before,
+.contact-page-header p span:last-child::before{
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+.contact-page-header p span:first-child::after,
+.contact-page-header p span:last-child::after{
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    height: .06rem;
+    width: 100%;
+    background: #888;
+}
+  .contactcontainer .content {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+    /* background: #fcfcfc; */
+    border-radius: .3rem;
+  
+  }
+  .contactcontainer .content .left-side {
+    /* height: 100%; */
+    width: 50%;
+    /* background: url("../img/cat4.jpg") 0 / cover no-repeat; */
+    position: relative;
+    /* background: red; */
+    min-height: 540px;
+  }
+  .contactcontainer .content .left-side .contactimage{
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+  }
+  .contactcontainer .content .left-side .contactimage img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: relative;
+  }
+  /* .contactcontainer .content .left-side::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../img/cat4.jpg') 0/cover no-repeat;
+    object-fit: cover;
+  } */
+  .contactcontainer .content .left-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.46);
+    z-index: 9;
+  }
+  .contactcontainer .content .left-side .contactinfo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 90%;
+    color: #ffffff;
+    /* color: #000; */
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+  }
+  .contactinfo h2{
+    border-bottom: .2rem solid var(--secondary-color);
+    font-size: 1.5rem;
+  }
+  .contactinfo p {
+    margin: 20px 0 0 10px;
+  }
+  .contactinfo p a {
+    color: #fff;
+  }
+  .contactinfo p:last-child {
+    margin: 50px 0 0 0;
+  }
+  .contactcontainer .content .right-side {
+    width: 50%;
+    /* margin-left: 75px; */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  .contactcontainer .content .right-side-container{
+      margin: 0 20px;
+  }
+  .contactcontainer .right-side .topic-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-color-hover);
+    margin-bottom: 1rem;
+  }
+  .right-side-container form{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  }
+  .contactcontainer .content .right-side .input-box {
+    min-height: 50px;
+    width: 100%;
+    margin: 12px 0;
+  }
+  .contactcontainer .content .right-side .input-box:not(:nth-child(5)){
+      box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.05);
+  }
+  .contactcontainer .content .right-side .sinput-box{
+    width: 48%;
+  }
+  .contactcontainer .right-side .input-box input,
+  .contactcontainer .right-side .input-box textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* border-left: 6px solid #ce4f3e;
+    border-bottom: 3px solid #ce4f3e; */
+    background: #fff;
+    padding: 0 10px;
+    resize: none;
+  }
+  .contactcontainer .right-side .input-box input[type="radio"] {
+    width: 3%;
+    min-width: 15px;
+    height: 50%;
+  }
+  .contactcontainer .right-side .input-box span {
+    position: inherit;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .contactcontainer .right-side .message-box {
+    min-height: 110px;
+  }
+  .contactcontainer .right-side .button {
+    display: inline-block;
+    margin-top: 12px;
+  }
+  .contactcontainer .right-side .button input[type="submit"] {
+    color: var(--light);
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    background: var(--secondary-color-hover);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    border-radius: 5rem;
+  }
+  .contactcontainer .right-side .button input[type="submit"]:hover {
+    background: var(--primary-color);
+  }
+  .contactcontainer .right-side .message-box textarea {
+    padding-top: 6px;
+    resize: vertical;
+    height: 100px;
+  }
+  @media screen and (max-width: 1200px){
+    .contactcontainer .content .left-side .contactinfo {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      color: #ffffff;
+      /* color: #000; */
+      padding: 10px;
+      border-radius: 10px;
+      z-index: 100;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .contactcontainer .content .right-side {
+      margin-left: 25px;
+    }
+  }
+  @media screen and (max-width: 876px) {
+    .contactcontainer .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      /* height: 1150px; */
+      overflow: visible;
+    }
+    .contactcontainer .content .left-side {
+      width: 100%;
+      height: 30%;
+      min-height: 350px;
+    }
+    .contactcontainer .content .left-side .contactinfo {
+      top: 10px;
+      left: 0;
+      width: 100%;
+    }
+    .contactinfo h2 {
+      margin-bottom: 1rem;
+    }
+    .contactinfo p {
+      margin: 0;
+    }
+    .contactinfo p:last-child {
+      margin: 10px 0 0 0;
+    }
+    .contactcontainer .content .right-side {
+      width: 100%;
+      height: 70%;
+      margin-left: 0px;
+      padding: 10px;
+    }
+    .contactcontainer .content .right-side .right-side-container{
+      margin: 0 0;
+    }
+    .contactcontainer .content .right-side .sinput-box{
+      width: 100%;
+    }
+  }  
+  @media screen and (max-width: 768px){
+    .contactcontainer .content{
+      width: 95%;
+    }
+  }
+/* CONTACT FIRST END  */
+
+/* MAP SECTION START  */
+.map-section{
+  width: 100%;
+  height: 30rem;
+  margin-top: 6rem;
+}
+.map{
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px){
+  .map-section{
+    margin-top: 4rem;
+  }
+}
+/* MAP SECTION END  */
+

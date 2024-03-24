@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/pricing.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Our Pricing | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'pricing' }) %>
+
+    <!-- PAGE MAIN IMAGE START  -->
+    <section class="page-image" id="add-margin">
+        <div class="page-image-container">
+            <h1>OUR PRICING</h1>
+            <div class="page-location">
+                <a href="/"><i class="fa-solid fa-house"></i></a>&nbsp; // OUR PRICING
+            </div>
+        </div>
+    </section>
+    <!-- PAGE MAIN IMAGE END  -->
+
+    <!-- PRICING START  -->
+    <section class="plans">
+        <div class="plans-container">
+            <div class="plan-header">
+                <h3>Our Pricing</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Explore a variety of memberships tailored for diverse preferences. Whether it's basic, Zumba, yoga, or the all-inclusive platinum package, find the ideal plan for your fitness journey.</p>
+            </div>
+            <div class="plan-boxes">
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 3000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/basic.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/basic">
+                                        <img src="img/basic.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/basic.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Basic Membership</h3>
+                                <p>Access our well-equipped gym and kickstart your fitness journey with the Basic Membership.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Full gym access</li>
+                                    <li>Budget-friendly option</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/basic">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 5000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/zumbastic.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/zumbastic">
+                                        <img src="img/zumbastic.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/zumbastic.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Zumbastic Membership</h3>
+                                <p>Dive into fitness with Basic Gym access plus four weekly Zumba classes in the lively atmosphere of our spacious hall.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Basic gym access</li>
+                                    <li>4 weekly Zumba classes</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/zumbastic">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 5000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/yogastic.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/yogastic">
+                                        <img src="img/yogastic.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/yogastic.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Yogastic Membership</h3>
+                                <p>Embrace tranquility with Basic Gym access and four weekly Yoga classes, finding peace in our dedicated yoga space.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Basic gym access</li>
+                                    <li>4 weekly Yoga classes</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/yogastic">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 8000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/elite.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/elite">
+                                        <img src="img/elite.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/elite.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Elite Membership</h3>
+                                <p>Unlimited access to all facilities, including gym, Zumba, and Yoga classes, for a comprehensive and energizing fitness experience.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Full gym access</li>
+                                    <li>Unlimited classes</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/elite">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 1500/Per Use</span></div>
+                            <a href="/saunasessionform">
+                                <img src="img/sauna.jpg" alt="">
+                            </a> 
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Sauna/Steam</h3>
+                                <p>Enjoy the benefits of our sauna and steam room on a per-use basis, offering relaxation and rejuvenation.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Per-use access to sauna and steam</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <a href="/saunasessionform">
+                                    <button>Get It</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 12000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/platinum.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/platinum">
+                                        <img src="img/platinum.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/platinum.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Platinum Membership</h3>
+                                <p>Experience the ultimate fitness package with unlimited access to all facilities, creating a personalized and comprehensive wellness routine.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Unlimited access to all facilities</li>
+                                    <li>Serenity with unlimited sauna and steam use</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/platinum">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-box">
+                    <div class="box">   
+                        <div class="plan-img">
+                            <div class="plan-type"><span>Rs. 10000/Month</span></div>
+                            <% if (authenticated) { %>
+                                <% if (hasMembership) { %>
+                                    <a href="<%= redirectPath %>">
+                                        <img src="img/personal_trainer.jpg" alt="">
+                                    </a>
+                                <% } else { %>
+                                    <a href="<%= redirectPath %>/private-trainer">
+                                        <img src="img/personal_trainer.jpg" alt="">
+                                    </a>
+                                <% } %>
+                            <% } else { %>
+                            <a href="<%= redirectPath %>">
+                                <img src="img/personal_trainer.jpg" alt="">
+                            </a> 
+                            <% } %>
+                        </div>
+                        <div class="plan-desc">
+                            <div class="membership-texts">
+                                <h3>Private Trainer</h3>
+                                <p>Elevate your fitness journey with personalized training from a private trainer, focusing on your unique goals.</p>
+                                <h4>Key Features</h4>
+                                <ul>
+                                    <li>Full gym access</li>
+                                    <li>One-on-one private training</li>
+                                </ul>
+                            </div>
+                            <div class="buttons">
+                                <% if (authenticated) { %>
+                                    <% if (hasMembership) { %>
+                                        <a href="<%= redirectPath %>">
+                                            <button>Update Membership</button>
+                                        </a>
+                                    <% } else { %>
+                                        <a href="<%= redirectPath %>/private-trainer">
+                                            <button>Join Now</button>
+                                        </a>
+                                    <% } %>
+                                <% } else { %>
+                                <a href="<%= redirectPath %>">
+                                    <button>Join Now</button>
+                                </a> 
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- PRICING END  -->
+
+    <%- include('partials/contact') %>
+
+    <%- include('partials/footer', { activePage: 'pricing' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

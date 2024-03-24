@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/membership.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Schedule Sauna Appointment | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: '', authenticated: authenticated }) %>
+
+    <!-- CONTACT PAGE FIRST SECTION START -->
+    <section class="contactcontainer" id="add-margin">
+        <div class="contact-page-header">
+                <h3>Schedule Sauna/Steam Appointment</h3>
+            <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+        </div>
+        <div class="content">
+            <div class="left-side" data-aos="fade-right">
+                <div class="contactimage">
+                    <img src="../img/sauna.jpg" alt="">
+                </div>
+                <div class="contactinfo">
+                        <h2>Sauna/Steam</h2>
+                        <p>Enjoy the benefits of our sauna and steam room on a per-use basis, offering relaxation and rejuvenation. (Rs. 1500/per use only)</p>
+                        <p style="line-height: 2;font-size: 18px;"><i class="fa-solid fa-dumbbell"></i></i> Per-use access to sauna and steam</p>                 
+                </div>
+            </div>
+            <div class="right-side" data-aos="fade-left">
+                <div class="right-side-container">
+                    <div class="topic-text" style="font-size: 28px;">Please fill this form.</div>
+                    <form action="/saunasessionform" method="POST">
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your name" name='name' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="email" placeholder="Your email" name='email' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your phone" pattern="[0-9]{10}" name='phone' required>
+                        </div>
+                        <div class="input-box sinput-box">
+                            <input type="text" placeholder="Your Address" name='address' required>
+                        </div>
+                        <div class="input-box">
+                            <label>
+                                <p style="font-size: 17px;">Date: </p>
+                                <input type="date" name="date" id="date" required>
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <p style="font-size: 17px;">Preffered method of communication</p>
+                            <span style="padding-left: 20px;">Phone: </span><input type="radio" name="preferredCommunication" id="phone" value="phone" checked>
+                            <span>Email: </span><input type="radio" name="preferredCommunication" value="email" id="email">
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea name="additionalComments" id="message" placeholder="Additional Information (Optional)"></textarea>
+                        </div>
+                        <div class="check-box">
+                            <label>
+                                <input type="checkbox" name="remember" style="margin-bottom: 15px"/>
+                                Agree to Fitness Club's terms and policies.
+                            </label>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Join Now" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT PAGE FIRST SECTION END -->
+
+    <%- include('partials/footer', { activePage: '' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

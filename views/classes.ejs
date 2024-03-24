@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/classes.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Our Classes | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'classes' }) %>
+
+    <!-- PAGE MAIN IMAGE START  -->
+    <section class="page-image" id="add-margin">
+        <div class="page-image-container">
+            <h1>OUR CLASSES</h1>
+            <div class="page-location">
+                <a href="/"><i class="fa-solid fa-house"></i></a>&nbsp; // ABOUT US
+            </div>
+        </div>
+    </section>
+    <!-- PAGE MAIN IMAGE END  -->
+
+    <!-- CLASSES START  -->
+    <section class="classes">
+        <div class="classes-container">
+            <div class="class-header">
+                <h3>Our Classes</h3>
+                <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+                <p>Explore Fitness Club's diverse classes, from cutting-edge cardio and strength training to lively Zumba and yoga sessions. Our fully equipped gym and convenient facilities ensure an enjoyable fitness journey. Join us in crafting a vibrant, healthy lifestyle tailored to your preferences.</p>
+            </div>
+            <div class="class-boxes">
+                <div class="box" data-aos="fade-up">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/cardio_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Cardio Workouts</h3>
+                        <p>Recharge with cardio in our top-notch gym. Shed calories, boost stamina, and leave feeling revitalized. Join us for an invigorating fitness experience.</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-offset="200">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/strength_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Strength Training</h3>
+                        <p>Define your strength with personalized training. Our trainers guide you to build power and resilience. Elevate your fitness journey with tailored workouts.</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/zumba_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Zumba Classes</h3>
+                        <p>Dance into joy in our spacious hall. Zumba sessions blend fitness and fun, creating a lively atmosphere. Join the celebration—it's a fitness party!</p>
+                    </div>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-offset="200">
+                    <div class="class-img">
+                        <div class="img">
+                            <img src="img/yoga_class.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="class-desc">
+                        <h3>Yoga Classes</h3>
+                        <p>Unwind with yoga, offered mornings and evenings. Discover serenity in our dedicated space, a haven for peaceful moments. Embrace the calm within.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CLASSES END  -->
+
+    <!-- ABOUT FIRST START -->
+    <section class="classes-first">
+        <div class="classes-first-container">
+            <div class="classes-first-left" data-aos="fade-left">
+                <div class="classes-first-img1">
+                    <img src="img/yogastic.jpg" alt="">
+                </div>
+                <div class="classes-first-img2">
+                    <img src="img/zumbastic.jpg" alt="">
+                </div>
+            </div>
+            <div class="classes-first-right" data-aos="fade-right">
+                <div class="classes-first-desc">
+                    <h2>Classes Schedule</h2>
+                    <p>Fitness Club offers Zumba and yoga classes every weekday. Check out our convenient class schedule below:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="day">Day</th>
+                                <th>Morning Zumba <br> 9AM-10AM</th>
+                                <th>Morning Yoga <br> 10AM-11AM</th>
+                                <th>Evening <br> 5PM-7PM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="day">Sunday</td>
+                                <td>Zumba</td>
+                                <td>Yoga</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">Monday</td>
+                                <td></td>
+                                <td>Yoga</td>
+                                <td>Zumba</td>
+                            </tr>
+                            <tr>
+                                <td class="day">Tuesday</td>
+                                <td>Zumba</td>
+                                <td>Yoga</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">Wednesday</td>
+                                <td></td>
+                                <td>Yoga</td>
+                                <td>Zumba</td>
+                            </tr>
+                            <tr>
+                                <td class="day">Thursday</td>
+                                <td>Zumba</td>
+                                <td>Yoga</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="day">Friday</td>
+                                <td></td>
+                                <td>Yoga</td>
+                                <td>Zumba</td>
+                            </tr>
+                        </tbody>
+                </table>
+                </div>
+                <div class="buttons">
+                    <a href="/pricing">
+                        <button class="btn">View Pricing</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT FIRST END -->
+
+    <%- include('partials/contact') %>
+
+    <%- include('partials/footer', { activePage: 'classes' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        $(document).ready(function(){
+            function visible(partial) {
+            var $t = partial,
+                $w = jQuery(window),
+                viewTop = $w.scrollTop(),
+                viewBottom = viewTop + $w.height(),
+                _top = $t.offset().top,
+                _bottom = _top + $t.height(),
+                compareTop = partial === true ? _bottom : _top,
+                compareBottom = partial === true ? _top : _bottom;
+
+            return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
+
+        }
+        $(window).scroll(function(){
+
+            if(visible($('.count-digit')))
+              {
+                  if($('.count-digit').hasClass('counter-loaded')) return;
+                  $('.count-digit').addClass('counter-loaded');
+                
+                  $('.count-digit').each(function () {
+                  var $this = $(this);
+                  jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                      duration: 2000,
+                      easing: 'swing',
+                      step: function () {
+                      $this.text(Math.ceil(this.Counter));
+                      }
+                  });
+                  });
+              }
+          })
+        })
+    </script>
+</body>
+</html>

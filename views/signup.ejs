@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Sign Up | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: '', authenticated: authenticated }) %>
+
+    <!-- CONTACT START  -->
+    <section class="contact-section" id="add-margin">
+        <div class="login-form">
+            <form action="/signup" method="post" novalidate>
+                <h1>Sign Up</h1>
+                <p>
+                    Please fill in this form to create an account. or
+                    <a href="/login"><strong>Login</strong></a>
+                </p>                
+                <i style="color: red;font-style: normal;"></i> <label for="id_username">Username:</label>
+                 <input type="text" name="username" maxlength="150" autofocus required id="id_username">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_first_name">First name:</label>
+                 <input type="text" name="firstName" maxlength="30" id="id_first_name">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_last_name">Last name:</label>
+                 <input type="text" name="lastName" maxlength="30" id="id_last_name">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_email">Email:</label>
+                 <input type="email" name="email" maxlength="254" required id="id_email">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_password1">Password:</label>
+                 <input type="password" name="password" autocomplete="new-password" required id="id_password1">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_password2">Password confirmation:</label>
+                 <input type="password" name="confirmPassword" autocomplete="new-password" required id="id_password2">
+                
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px"/>
+                    Remember me
+                </label>
+
+                <p>
+                    By creating an account you agree to our Terms & Privacy.
+                </p>
+
+                <div class="buttons">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                    <a href="/"><button type="button" class="cancelbtn">Cancel</button></a>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    <!-- CONTACT END  -->
+
+    <%- include('partials/footer', { activePage: '' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

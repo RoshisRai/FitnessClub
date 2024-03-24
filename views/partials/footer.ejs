@@ -1,0 +1,74 @@
+<!-- FOOTER START  -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-header" data-aos="zoom-in" data-aos-offset="20">
+            <div class="footer-img">
+                <img src="img/logo.png" alt="">
+                <span>Fitness Club</span>
+            </div>
+            <div class="footer-desc">
+                <p>Elevate your wellness at Fitness Club. Diverse classes, top facilities, and expert trainers for a vibrant lifestyle. Join us for a healthier, happier you!</p>
+            </div>
+        </div>
+        <div class="footer-body">
+            <div class="footer-item">
+                <h4>Get in touch</h4>
+                <ul>
+                    <li><i class="fa-sharp fa-solid fa-location-dot"></i> Samakhusi Marg, Kathmandu</li>
+                    <li><i class="fa-solid fa-envelope"></i> fitnessclubnepal@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i> +977 9800000000</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>Business hours</h4>
+                <ul>
+                    <li>Sunday to Thursday: 10am to 6pm</li>
+                    <li>Friday: 10am to 3pm</li>
+                    <li>Saturday: Closed</li>
+                    <li>Support Hours: 10am to 6pm every day</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>Social Links</h4>
+                <div class="foot-social-links">
+                    <ul>
+                        <a href="#"><li><i class="fa-brands fa-facebook-f"></i> Facebook</li></a>
+                        <a href="#"><li><i class="fa-brands fa-whatsapp"></i> Whatsapp</li></a>
+                        <a href="#"><li><i class="fa-brands fa-instagram"></i> Instagram</li></a>
+                        <a href="#"><li><i class="fa-brands fa-youtube"></i> Youtube</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h4>Mailing list</h4>
+                <p>Enter your email address for our mailing list to keep your self our lastest updated.</p>
+                <form action="/newsletter" method="post" class="footer-form">
+                    <input type="text" name="email" id="email" placeholder="Email Address">
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-nav">
+                <ul>
+                    <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">
+                        <li>Home</li>
+                    </a>
+                    <a href="/classes" class="<%= activePage === 'classes' ? 'active' : '' %>">
+                        <li>Classes</li>
+                    </a>
+                    <a href="/trainers" class="<%= activePage === 'trainers' ? 'active' : '' %>">
+                        <li>Trainers</li>
+                    </a>
+                    <a href="/pricing" class="<%= activePage === 'pricing' ? 'active' : '' %>">
+                        <li>Pricing</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-copy">
+                <p><b style="font-size: 1.1rem">&copy; <strong id="date"></strong></b> Fitness Club Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER END  -->

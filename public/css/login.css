@@ -1,0 +1,83 @@
+.login-form {
+    width: 30rem;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    font-size: 2rem;
+    color: var(--secondary-color-hover);
+}
+
+.login-form form, .customer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form form p , .customer-form form p{
+    margin-bottom: 1rem;
+}
+
+.login-form form label, .customer-form form label {
+    margin-bottom: .5rem;
+}
+
+.login-form form input, .login-form form select,
+.customer-form form input, .customer-form form select {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: .3rem 0;
+    text-indent: .5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
+.login-form form input::placeholder,
+.customer-form form input::placeholder {
+    font-size: 1.6rem;
+    color: rgb(136, 135, 135);
+}
+
+.login-form form .buttons,
+.customer-form form .buttons {
+    margin-top: 1rem;
+}
+
+.login-form form button,
+.customer-form form button,
+.indicators .buttons a button  {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: .7rem 2rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--secondary-color-hover);
+    color: var(--light);
+    cursor: pointer;
+    transition: 200ms;
+    border-radius: 5rem;
+}
+.buttons .cancelbtn:hover,
+.buttons .signupbtn:hover,
+.indicators .buttons a button:hover{
+    background-color: var(--primary-color);
+}
+
+.login-form form p a,
+.customer-form form p a,
+.forgot {
+    color: var(--secondary-color-hover);
+}
+
+input:read-only {
+    background: rgb(253, 243, 243);
+}
+@media screen and (max-width: 1000px) {
+    .indicators{
+    border-bottom: 1px solid #888;
+    margin-bottom: 2rem;
+    }
+}
+  

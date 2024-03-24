@@ -1,0 +1,81 @@
+<!-- Message Alert -->
+<% if (messages && typeof messages === 'object' && (messages.success || messages.error)) { %>
+    <% if (messages.success && messages.success.length > 0) { %>
+    <div class="alert" style="display: none;">
+        <% messages.success.forEach(message => { %>
+        <span class="success"><%= message %></span>
+        <span class="close">&#10006;</span>
+        <% }); %>
+    </div>
+      <% } %>
+    <% if (messages.error && messages.error.length > 0) { %>
+    <div class="alert" style="display: none;">
+        <% messages.error.forEach(message => { %>
+          <span class="error"><%= message %></span>
+          <span class="close">&#10006;</span>
+        <% }); %>
+    </div>
+    <% } %>
+<% } %>
+<!-- Message Alert -->
+  
+<!-- HEADER START -->
+<div class="topbar">
+    <div class="topbar-container">
+        <div class="topbar-left">
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> +977 9800000000</li>
+                <li><i class="fa-solid fa-clock"></i> Sun-Fri 6:00 am - 10:00 pm</li>
+                <li><i class="fa-solid fa-location-dot"></i> Samakhusi Marg, Kathmandu</li>
+            </ul>
+        </div>
+        <div class="topbar-right">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<nav class="navbar" id="navbar">
+    <div class="navbar-container">
+        <div class="navlogo">
+            <a href="/">
+                <img src="/img/logo-full.png" alt="Goodmil logo">
+            </a>
+        </div>
+        <div class="navlinks">
+            <div class="drop-navlinks-title">
+                <h4>Fitness Club</h4>
+                <div class="cross-icon">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <ul>
+                <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">HOME</a></li>
+                <li><a href="/about" class="<%= activePage === 'about' ? 'active' : '' %>">ABOUT</a></li>
+                <li><a href="/classes" class="<%= activePage === 'classes' ? 'active' : '' %>">CLASSES</a></li>
+                <li><a href="/trainers" class="<%= activePage === 'trainers' ? 'active' : '' %>">TRAINERS</a></li>
+                <li><a href="/pricing" class="<%= activePage === 'pricing' ? 'active' : '' %>">PRICING</a></li>
+                <li><a href="/contact" class="<%= activePage === 'contact' ? 'active' : '' %>">CONTACT</a></li>
+                <% if (authenticated) { %>
+                    <li><a href="/membershipdetails" class="<%= activePage === 'membership' ? 'active' : '' %>">MEMBERSHIP</a></li>
+                    <li><a href="/profile" class="<%= activePage === 'profile' ? 'active' : '' %>">PROFILE</a></li>
+                    <li><a href="/logout" class="<%= activePage === 'login' ? 'login-link active' : 'login-link' %>">Log Out <i class="fa-solid fa-right-from-bracket"></i></a></li>
+                <% } else { %>
+                    <li><a href="/login" class="<%= activePage === 'login' ? 'login-link active' : 'login-link' %>">LogIn / SignUp</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="nav-shadow" id="nav-shadow"></div>
+        <div class="nav-dropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>        
+</nav>
+<!-- HEADER END -->

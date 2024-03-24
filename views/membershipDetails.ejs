@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/membership.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>My Membership Details | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'membership' }) %>
+
+    <div id="add-margin"></div>
+
+    <!-- VIEW MEMBERSHIP FIRST SECTION START -->
+    <section class="membershipcontainer">
+        <div class="membership-page-header">
+            <h3>Hi <%= user.firstName %>,</h3>
+            <p><span></span> <i class="fa-solid fa-dumbbell"></i> <span></span></p>
+            <h4>Here's your membership and/or any sauna appointment details.</h4>
+        </div>
+        <div class="content">
+            <% if (hasMembership) { %>
+                <% membershipDetail.forEach(membershipDetails => { %>
+                    <% if (membershipDetails.membershipType === 'basic') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/basic.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Basic Membership</h2>
+                                        <p>Access our well-equipped gym and kickstart your fitness journey with the Basic Membership.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> Budget-friendly option</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else if (membershipDetails.membershipType === 'zumbastic') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/zumbastic.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Zumbastic Membership</h2>
+                                        <p>Dive into fitness with Basic Gym access plus four weekly Zumba classes in the lively atmosphere of our spacious hall.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Basic gym access</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> 4 weekly Zumba classes</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else if (membershipDetails.membershipType === 'yogastic') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/yogastic.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Yogastic Membership</h2>
+                                        <p>Embrace tranquility with Basic Gym access and four weekly Yoga classes, finding peace in our dedicated yoga space.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Basic gym access</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> 4 weekly Yoga classes</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else if (membershipDetails.membershipType === 'elite') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/elite.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Elite Membership</h2>
+                                        <p>Unlimited access to all facilities, including gym, Zumba, and Yoga classes, for a comprehensive and energizing fitness experience.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> Unlimited classes</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else if (membershipDetails.membershipType === 'platinum') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/platinum.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Platinum Membership</h2>
+                                        <p>Experience the ultimate fitness package with unlimited access to all facilities, creating a personalized and comprehensive wellness routine.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Unlimited access to all facilities</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> Serenity with unlimited sauna and steam use</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } else if (membershipDetails.membershipType === 'private-trainer') { %>
+                        <div class="content-main">
+                            <div class="left-side" data-aos="fade-right">
+                                <div class="membershipimage">
+                                    <img src="img/personal_trainer.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="right-side" data-aos="fade-left">
+                                <div class="right-side-container">
+                                    <div class="texts">
+                                        <h2>Private Trainer</h2>
+                                        <p>Elevate your fitness journey with personalized training from a private trainer, focusing on your unique goals.</p>
+                                        <div class="key-features">
+                                            <h4>Key Features</h4>
+                                            <p><i class="fa-solid fa-dumbbell"></i></i> Full gym access</p>
+                                            <p><i class="fa-solid fa-dumbbell"></i> One-on-one private training</p>
+                                        </div>
+                                        <br>
+                                        <p>Status: <strong><%= membershipDetails.status %></strong></p>
+                                        <p>Start Date: <%= membershipDetails.startDate.toLocaleDateString() %></strong></p>
+                                        <p>End Date: 
+                                        <% if (membershipDetails.endDate.getTime() !== -1) { %>
+                                            <%= membershipDetails.endDate.toLocaleDateString() %>
+                                        <% } else { %>
+                                            To be decided.
+                                        <% } %>
+                                        </p>
+                                    </div>
+                                    <div class="button">
+                                        <a href="/membershipchange"><input type="button" value="Change Membership"></a>&nbsp;&nbsp;
+                                        <a href="/pricing"><input type="button" value="Other Memberships"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } else { %>
+                            <p>You dont have a valid membership option.</p>
+                    <% } %> 
+                <% }); %>
+            <% } %>
+            <% if (membershipDetail.length === 0) { %>
+                <div class="no-membership">
+                    <p style="font-size: 17px;margin-top: 10px; margin-bottom: 10px;">You don't have a membership with us yet!</p>
+                    <a href="/pricing"><button>Get One</button></a>
+                </div>
+            <% } %>
+
+        </div>
+        <div class="sauna-content">
+            <h4>Here are your sauna appointments:</h4>
+            <% if (saunaAppointments && saunaAppointments.length > 0) { %>
+                <% saunaAppointments.forEach(saunaAppointment => { %>
+                    <div class="sauna-main">
+                        <div class="left-side" data-aos="fade-right">
+                            <div class="membershipimage">
+                                <img src="img/sauna.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right-side" data-aos="fade-left">
+                            <div class="right-side-container">
+                                <div class="texts">
+                                    <h2>Sauna/Steam</h2>
+                                    <p>Enjoy the benefits of our sauna and steam room on a per-use basis, offering relaxation and rejuvenation.</p>
+                                    <p><strong>Scheduled Date: <%= saunaAppointment.scheduledDate.toLocaleDateString() %></strong></p>
+                                    <div class="key-features">
+                                        <h4>Key Features</h4>
+                                        <p><i class="fa-solid fa-dumbbell"></i></i> Basic gym access</p>
+                                        <p><i class="fa-solid fa-dumbbell"></i> 4 weekly Yoga classes</p>
+                                    </div>
+                                    <br>
+                                    <p>Status: <strong><%= saunaAppointment.status %></strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+                <div class="button">
+                    <a href="/saunasessionform"><input type="button" value="Book More Appointments"></a>
+                </div>
+            <% } else { %>
+                <p class="no-appointment">No scheduled sauna appointments found.</p>
+            <% } %>
+        </div>
+    </section>
+    <!-- VIEW MEMBERSHIP FIRST SECTION END -->
+
+    <%- include('partials/footer', { activePage: '' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

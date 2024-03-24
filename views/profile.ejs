@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/jpg">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="https://kit.fontawesome.com/73c17b3c10.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Update Profile | Fitness Club</title>
+</head>
+<body>
+
+    <!-- PRELOADER START -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- PRELOADER END -->
+
+    <%- include('partials/header', { activePage: 'profile', authenticated: authenticated }) %>
+
+    <!-- CONTACT START  -->
+    <section class="contact-section" id="add-margin">
+        <div class="login-form">
+            <form action="/profile" method="post" novalidate>
+                <h1>Your Profile</h1>
+                <input type="hidden" name="csrfmiddlewaretoken" value="PD45r6DDduePBkrgiARigW7zrjG1nxG6PUYlIq9SZpoOPfiRjexQTnrbwXp92S4c">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_username">Username:</label>
+                 <input type="text" name="username" value="<%= user.username %>" readonly="true" maxlength="150" required id="id_username">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_email">Email address:</label>
+                 <input type="email" name="email" value="<%= user.email %>" readonly="true" maxlength="254" id="id_email">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_first_name">First name:</label>
+                 <input type="text" name="firstName" value="<%= user.firstName %>" maxlength="150" id="id_first_name">
+                
+                <i style="color: red;font-style: normal;"></i> <label for="id_last_name">Last name:</label>
+                 <input type="text" name="lastName" value="<%= user.lastName %>" maxlength="150" id="id_last_name">
+                
+                <div class="buttons">
+                    <button type="submit" class="signupbtn">Update</button>
+                    <a href="/"><button type="button" class="cancelbtn">Cancel</button></a>
+                </div>
+                
+                <a class="forgot" href="/passwordchange" style="margin-top: 2rem;color: #ce4f3e;">Change Password</a>  
+            </form>
+        </div>
+    </section>
+    <!-- CONTACT END  -->
+
+    <%- include('partials/footer', { activePage: '' }) %>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
