@@ -12,7 +12,7 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 
 const path = require('path');
 const User = require('./models/user');
@@ -133,7 +133,7 @@ app.use('/newsletter', newsLetterRoute);
 if (require.main === module) {
     connect().then(isConnected => {
         if (isConnected) {
-            app.listen(port, () => {
+            app.listen(port, '0.0.0.0', () => {
                 console.log(`Server is running on port ${port}`);
             });
         }
