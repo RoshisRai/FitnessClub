@@ -5,13 +5,13 @@
 
 ## Table of Contents 📋
 
-1. 📖 [Introduction](#introduction)
-2. 💻 [Tech Stack](#tech-stack)
-3. 🌟 [Features](#features)
-4. 🚀 [QuickStart](#quickstart)
-5. 🤝 [Contributing](#contributing)
-6. 📜 [License](#license)
-7. 📞 [Contact](#contact)
+1. 📖 [Introduction](#introduction-)
+2. 💻 [Tech Stack](#tech-stack-)
+3. 🌟 [Features](#features-)
+4. 🚀 [QuickStart](#quickstart-)
+5. 🤝 [Contributing](#contributing-)
+6. 📜 [License](#license-)
+7. 📞 [Contact](#contact-)
 
 ## Introduction 📖
 
@@ -27,7 +27,7 @@ This project is a website designed for Fitness Club, aiming to create a friendly
 
 ## Features 🌟
 
-### Homepage Sections:
+### 1. Homepage Sections:
 
 👉 **Slider with Animation**: Engage visitors with a dynamic slider featuring captivating animations in the hero section of the homepage.
 
@@ -46,7 +46,7 @@ This project is a website designed for Fitness Club, aiming to create a friendly
 👉 **Footer**: Navigation links, social media icons, and relevant details.
 
 
-### Dedicated Pages:
+### 2. Dedicated Pages:
 
 👉 **About Page**: Provide comprehensive information about Fitness Club, its history, mission, and values.
 
@@ -59,12 +59,12 @@ This project is a website designed for Fitness Club, aiming to create a friendly
 👉 **Contact Page**: Display a contact form, address, and contact information, along with integrated Google Maps for easy navigation.
 
 
-### Authentication 🔒:
+### 3. Authentication 🔒:
 
 👉 **Login and Signup Page**: Provide secure login and registration functionality for users to access their accounts.
 
 
-### User Account Management 🧑‍💻:
+###4. User Account Management 🧑‍💻:
 
 👉 **Membership Page**: Allow logged-in users to manage their memberships, including viewing membership details, upgrading/downgrading plans, and canceling memberships.
 
@@ -72,7 +72,7 @@ This project is a website designed for Fitness Club, aiming to create a friendly
 
 👉 **Change Password Page**: Allow users to change their passwords securely for enhanced account security.
 
-
+<br>
 
 ## QuickStart 🚀
 
@@ -88,7 +88,7 @@ git clone https://github.com/RoshisRai/FitnessClub.git
 2. **Navigate to the project directory:**
 
 ```bash
-cd fitness-club-website
+cd FitnessClub
 ```
 
 3. **Install dependencies:**
